@@ -138,8 +138,8 @@ public class LightAgentManager implements AgentManagerInterface {
             cellAgent.setIndex(childIndex);
             cellAgent.setHostName(key);
             agents.put(key, cellAgent);
-            if (cellAgent instanceof ShieldContainerInterface && ((ShieldContainerInterface) cellAgent).generaterConfigs() != null) {
-                setDefaultAgent(((ShieldContainerInterface) cellAgent).generaterConfigs(), key, childIndex);
+            if (cellAgent instanceof ShieldContainerInterface && ((ShieldContainerInterface) cellAgent).generateConfigs() != null) {
+                setDefaultAgent(((ShieldContainerInterface) cellAgent).generateConfigs(), key, childIndex);
             }
         }
     }
@@ -301,7 +301,7 @@ public class LightAgentManager implements AgentManagerInterface {
         // 三种可能
         // 1.以前没有的agent,新增的,要重新onCreat,onResume
         // 2.以前有的agent,现在还有,那什么都不做,还原这个agent,等待之后统一dispatchCellChanged
-        // 3.以前有的agent,后来没有了,那要调用stop,destory
+        // 3.以前有的agent,后来没有了,那要调用stop,destroy
         // resetAgent的时候,对agent列表做一个整理
         ShieldEnvironment.INSTANCE.getShieldLogger().v("@ResetStart@");
         ArrayList<String> copyOfAgentList = (ArrayList<String>) agentList.clone();

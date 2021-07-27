@@ -86,9 +86,9 @@ public class WhiteBoard {
 
     /**
      * * Life cycle method *
-     * Called to destory the WhiteBoard.
+     * Called to destroy the WhiteBoard.
      */
-    public void onDestory() {
+    public void onDestroy() {
         subjectMap.clear();
         mData.onDestroy();
         messageManager.onDestroy();

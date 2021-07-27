@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class DividerFragment extends AbsExampleFragment {
     @Override
-    public ArrayList<AgentListConfig> generaterConfigs() {
+    public ArrayList<AgentListConfig> generateConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new DividerAgentConfig());
         return configs;

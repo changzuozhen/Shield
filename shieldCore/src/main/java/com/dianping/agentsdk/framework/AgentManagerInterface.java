@@ -35,7 +35,7 @@ public interface AgentManagerInterface {
     void stopAgents();
 
     /**
-     *  分发onDestory生命周期
+     *  分发ondestroy生命周期
      * */
     void destroyAgents();
 

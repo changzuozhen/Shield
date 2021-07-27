@@ -36,7 +36,7 @@ public class LinkTypeFragment extends AbsExampleFragment {
     }
 
     @Override
-    public ArrayList<AgentListConfig> generaterConfigs() {
+    public ArrayList<AgentListConfig> generateConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new LinkTypeAgentConfig());
         return configs;

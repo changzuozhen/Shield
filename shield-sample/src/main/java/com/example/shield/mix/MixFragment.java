@@ -34,7 +34,7 @@ public class MixFragment extends AbsExampleFragment {
     }
 
     @Override
-    public ArrayList<AgentListConfig> generaterConfigs() {
+    public ArrayList<AgentListConfig> generateConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new MixAgentConfig());
         return configs;

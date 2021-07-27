@@ -48,7 +48,7 @@ abstract class ShieldFragment(private val shieldLifeCycler: ShieldLifeCycler = S
         super.onActivityCreated(savedInstanceState)
         shieldLifeCycler.cellManager = initCellManager()
         shieldLifeCycler.agentManager = initAgentManger()
-        shieldLifeCycler.shieldConfigs = generaterConfigs()
+        shieldLifeCycler.shieldConfigs = generateConfigs()
         shieldLifeCycler.onActivityCreated(savedInstanceState)
     }
 
@@ -120,10 +120,10 @@ abstract class ShieldFragment(private val shieldLifeCycler: ShieldLifeCycler = S
     }
 
     override fun resetAgents(savedInstanceState: Bundle?) {
-        shieldLifeCycler.shieldConfigs = generaterConfigs()
+        shieldLifeCycler.shieldConfigs = generateConfigs()
         shieldLifeCycler.resetAgents(savedInstanceState)
     }
 
-    override abstract fun generaterConfigs(): ArrayList<AgentListConfig>?
+    override abstract fun generateConfigs(): ArrayList<AgentListConfig>?
 
 }

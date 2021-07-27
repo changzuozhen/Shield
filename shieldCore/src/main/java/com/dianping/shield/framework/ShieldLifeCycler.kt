@@ -163,17 +163,17 @@ open class ShieldLifeCycler : AgentCellBridgeInterface, UIRDriverInterface,
                 (cellManager as? ExposeScreenLoadedInterface)?.finishExpose()
             }
             if (cellManager is SectionRecyclerCellManager) {
-                (cellManager as? SectionRecyclerCellManager)?.destory()
+                (cellManager as? SectionRecyclerCellManager)?.destroy()
             }
             if (cellManager is ShieldNodeCellManager) {
-                (cellManager as? ShieldNodeCellManager)?.destory()
+                (cellManager as? ShieldNodeCellManager)?.destroy()
             }
         }
         if (this::agentManager.isInitialized) {
             agentManager.destroyAgents()
         }
         if (!isWhiteBoardShared) {
-            whiteBoard.onDestory()
+            whiteBoard.onDestroy()
         }
         pageContainer?.onDestroy()
         isPauseing = false
@@ -277,7 +277,7 @@ open class ShieldLifeCycler : AgentCellBridgeInterface, UIRDriverInterface,
         }
     }
 
-    override fun generaterConfigs(): ArrayList<AgentListConfig>? {
+    override fun generateConfigs(): ArrayList<AgentListConfig>? {
         return shieldConfigs;
     }
 

@@ -923,7 +923,7 @@ public class SectionRecyclerCellManager implements UIRCellManagerInterface<Recyc
         }
     }
 
-    public void destory() {
+    public void destroy() {
         finishExpose();
         mExposedEngine.stopMoveStatusDispatch();
         mExposedEngine.clearMoveStatusMap();

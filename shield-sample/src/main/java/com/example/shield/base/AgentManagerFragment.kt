@@ -9,7 +9,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.dianping.agentsdk.framework.AgentCellBridgeInterface
 import com.dianping.agentsdk.framework.DriverInterface
-import com.dianping.agentsdk.framework.PageContainerInterface
 import com.dianping.agentsdk.framework.WhiteBoard
 import com.dianping.agentsdk.manager.SectionRecyclerCellManager
 import com.dianping.shield.bridge.feature.ShieldGlobalFeatureInterface
@@ -57,7 +56,7 @@ abstract class AgentManagerFragment(protected val shieldLifeCycler: ShieldLifeCy
             shieldLifeCycler.pageContainer
         )
 
-        shieldLifeCycler.shieldConfigs = generaterConfigs()
+        shieldLifeCycler.shieldConfigs = generateConfigs()
         shieldLifeCycler.onActivityCreated(savedInstanceState)
         setAgentContainerView(mRecyclerView!!)
         LogUtils.d(TAG, "⚠️onActivityCreated() called with: savedInstanceState = [$savedInstanceState]")
@@ -106,7 +105,7 @@ abstract class AgentManagerFragment(protected val shieldLifeCycler: ShieldLifeCy
      * @param savedInstanceState
      */
     override fun resetAgents(savedInstanceState: Bundle?) {
-        shieldLifeCycler.shieldConfigs = generaterConfigs()
+        shieldLifeCycler.shieldConfigs = generateConfigs()
         shieldLifeCycler.resetAgents(savedInstanceState)
     }
 

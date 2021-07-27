@@ -10,7 +10,7 @@ import java.util.*
  * Created by zhi.he on 2018/5/9.
  */
 interface ShieldContainerInterface {
-    fun generaterConfigs(): ArrayList<AgentListConfig>?
+    fun generateConfigs(): ArrayList<AgentListConfig>?
 
     fun resetAgents(savedInstanceState: Bundle?)
 

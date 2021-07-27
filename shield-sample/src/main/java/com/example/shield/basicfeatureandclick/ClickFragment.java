@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class ClickFragment extends AbsExampleFragment {
 
     @Override
-    public ArrayList<AgentListConfig> generaterConfigs() {
+    public ArrayList<AgentListConfig> generateConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new ClickAgentConfig());
         return configs;

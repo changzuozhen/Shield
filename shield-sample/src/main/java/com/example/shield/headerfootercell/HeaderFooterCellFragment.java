@@ -32,7 +32,7 @@ public class HeaderFooterCellFragment extends AbsExampleFragment {
     }
 
     @Override
-    public ArrayList<AgentListConfig> generaterConfigs() {
+    public ArrayList<AgentListConfig> generateConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new HeaderFooterCellAgentConfig());
         return configs;

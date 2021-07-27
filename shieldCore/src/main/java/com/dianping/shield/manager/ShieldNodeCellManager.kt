@@ -1130,7 +1130,7 @@ class ShieldNodeCellManager(private val mContext: Context) : UIRCellManagerInter
         nodeAdapter.updateStatus()
     }
 
-    fun destory() {
+    fun destroy() {
         recyclerView?.removeOnScrollListener(cellManagerOnScrollListener)
         processorHolder.creator = null
         nodeAdapter.clearStoredInfo()

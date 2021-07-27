@@ -208,7 +208,7 @@ public abstract class LightAgent implements AgentInterface, ShieldContainerInter
 
     //模块嵌套开始
     @Override
-    public ArrayList<AgentListConfig> generaterConfigs() {
+    public ArrayList<AgentListConfig> generateConfigs() {
         return null;
     }
 
