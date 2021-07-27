@@ -45,11 +45,6 @@ public class ClickSectionThreeAgent extends LightAgent {
     }
 
     @Override
-    public void onResume() {
-        super.onResume();
-    }
-
-    @Override
     public SectionCellInterface getSectionCellInterface() {
         return mClickViewCell;
     }

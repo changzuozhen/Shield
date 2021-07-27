@@ -42,7 +42,7 @@ public class MessageManager<H> {
      * For Test
      * @return
      */
-    HashMap<String, ArrayList<H>> getRegistrationMap() {
+    public HashMap<String, ArrayList<H>> getRegistrationMap() {
         return registrationMap;
     }
 
@@ -50,7 +50,7 @@ public class MessageManager<H> {
      * For Test
      * @return
      */
-    HashMap<String, Pair<String, H>> getIndexMap() {
+    public HashMap<String, Pair<String, H>> getIndexMap() {
         return indexMap;
     }
 

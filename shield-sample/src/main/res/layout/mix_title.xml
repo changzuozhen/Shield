@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
-    android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin">
+    android:paddingBottom="@dimen/activity_vertical_margin">
 
     <Button
         android:id="@+id/bt_loading"
@@ -15,6 +15,7 @@
         android:layout_weight="1"
         android:background="@android:color/holo_blue_dark"
         android:text="Loading"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="@dimen/agent_button_text" />
 
@@ -26,6 +27,7 @@
         android:layout_weight="1"
         android:background="@android:color/holo_blue_dark"
         android:text="Failed"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="@dimen/agent_button_text" />
 
@@ -37,6 +39,7 @@
         android:layout_weight="1"
         android:background="@android:color/holo_blue_dark"
         android:text="Empty"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="@dimen/agent_button_text" />
 
@@ -47,7 +50,20 @@
         android:layout_marginLeft="5dp"
         android:layout_weight="1"
         android:background="@android:color/holo_blue_dark"
-        android:text="MORE"
+        android:text="More"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/agent_button_text" />
+
+    <Button
+        android:id="@+id/bt_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_weight="1"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Test"
+        android:textAllCaps="false"
         android:textColor="@android:color/white"
         android:textSize="@dimen/agent_button_text" />
 

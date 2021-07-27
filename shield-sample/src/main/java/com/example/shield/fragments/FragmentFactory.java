@@ -17,6 +17,7 @@ import com.example.shield.headerfootercell.HeaderFooterCellFragment;
 import com.example.shield.linktype.LinkTypeFragment;
 import com.example.shield.mix.MixFragment;
 import com.example.shield.status.StatusFragment;
+import com.example.shield.test.TestFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,6 +34,7 @@ public class FragmentFactory {
         fragments.add(new HeaderFooterCellFragment());
         fragments.add(new LinkTypeFragment());
         fragments.add(new MixFragment());
+        fragments.add(new TestFragment());
     }
 
     public ViewGroup getContainerLayout(final Fragment mainFragment) {

@@ -50,14 +50,14 @@ public class WhiteBoardMessageManager {
     /**
      * For Test
      */
-    MessageManager<WhiteBoard.MessageHandler> getMessageHandlerManager() {
+    public MessageManager<WhiteBoard.MessageHandler> getMessageHandlerManager() {
         return messageHandlerManager;
     }
 
     /**
      * For Test
      */
-    MessageManager<WhiteBoard.MessageHandlerWithKey> getMessageHandlerWithKeyManager() {
+    public MessageManager<WhiteBoard.MessageHandlerWithKey> getMessageHandlerWithKeyManager() {
         return messageHandlerWithKeyManager;
     }
 

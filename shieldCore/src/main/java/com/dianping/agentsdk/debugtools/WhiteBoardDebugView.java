@@ -67,6 +67,10 @@ public class WhiteBoardDebugView extends LinearLayout {
     public void setData(@NonNull WhiteBoard whiteBoard) {
         dataMap = whiteBoard.getContent();
         keyList = new ArrayList<>();
+        dataMap.put("MessageHandlerManager IndexMap ", whiteBoard.getMessageManager().getMessageHandlerManager().getIndexMap());
+        dataMap.put("MessageHandlerManager RegistrationMap ", whiteBoard.getMessageManager().getMessageHandlerManager().getRegistrationMap());
+        dataMap.put("MessageHandlerWithKeyManager IndexMap ", whiteBoard.getMessageManager().getMessageHandlerWithKeyManager().getIndexMap());
+        dataMap.put("MessageHandlerWithKeyManager RegistrationMap ", whiteBoard.getMessageManager().getMessageHandlerWithKeyManager().getRegistrationMap());
         keyList.addAll(dataMap.keySet());
         Collections.sort(keyList);
         adapter.notifyDataSetChanged();

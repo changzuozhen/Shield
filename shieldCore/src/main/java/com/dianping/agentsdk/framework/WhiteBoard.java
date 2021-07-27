@@ -109,7 +109,7 @@ public class WhiteBoard {
     /**
      * For Test
      */
-    WhiteBoardMessageManager getMessageManager() {
+    public WhiteBoardMessageManager getMessageManager() {
         return messageManager;
     }
 
