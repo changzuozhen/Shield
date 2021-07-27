@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.shield.R;
+import com.example.shield.base.AbsExampleFragment;
 import com.example.shield.basicfeatureandclick.ClickFragment;
 import com.example.shield.divider.DividerFragment;
 import com.example.shield.headerfootercell.HeaderFooterCellFragment;

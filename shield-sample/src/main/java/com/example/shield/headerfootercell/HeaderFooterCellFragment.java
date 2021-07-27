@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
 import com.dianping.agentsdk.framework.AgentListConfig;
-import com.example.shield.fragments.AbsExampleFragment;
+import com.example.shield.base.AbsExampleFragment;
 
 import java.util.ArrayList;
 
@@ -18,20 +18,12 @@ import java.util.ArrayList;
  */
 public class HeaderFooterCellFragment extends AbsExampleFragment {
 
-    private RecyclerView recyclerView;
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        recyclerView = new RecyclerView(getContext());
+        mRecyclerView = new RecyclerView(getContext());
         LinearLayout rootView = new LinearLayout(getContext());
-        rootView.addView(recyclerView, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        rootView.addView(mRecyclerView, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return rootView;
-    }
-
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        setAgentContainerView(recyclerView);
     }
 
     @Override
@@ -40,7 +32,7 @@ public class HeaderFooterCellFragment extends AbsExampleFragment {
     }
 
     @Override
-    protected ArrayList<AgentListConfig> generaterDefaultConfigAgentList() {
+    public ArrayList<AgentListConfig> generaterConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new HeaderFooterCellAgentConfig());
         return configs;

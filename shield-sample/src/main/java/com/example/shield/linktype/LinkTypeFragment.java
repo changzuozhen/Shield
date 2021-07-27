@@ -10,7 +10,7 @@ import android.widget.LinearLayout;
 
 import com.dianping.agentsdk.framework.AgentListConfig;
 import com.example.shield.R;
-import com.example.shield.fragments.AbsExampleFragment;
+import com.example.shield.base.AbsExampleFragment;
 
 import java.util.ArrayList;
 
@@ -20,22 +20,15 @@ import java.util.ArrayList;
 
 public class LinkTypeFragment extends AbsExampleFragment {
 
-    private RecyclerView recyclerView;
-
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        recyclerView = new RecyclerView(getContext());
-        recyclerView.setBackgroundResource(R.color.gray_light_background);
+        mRecyclerView = new RecyclerView(getContext());
+        mRecyclerView.setBackgroundResource(R.color.gray_light_background);
         LinearLayout rootView = new LinearLayout(getContext());
-        rootView.addView(recyclerView, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
+        rootView.addView(mRecyclerView, new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         return rootView;
     }
 
-    @Override
-    public void onActivityCreated(Bundle savedInstanceState) {
-        super.onActivityCreated(savedInstanceState);
-        setAgentContainerView(recyclerView);
-    }
 
     @Override
     public String functionName() {
@@ -43,7 +36,7 @@ public class LinkTypeFragment extends AbsExampleFragment {
     }
 
     @Override
-    protected ArrayList<AgentListConfig> generaterDefaultConfigAgentList() {
+    public ArrayList<AgentListConfig> generaterConfigs() {
         ArrayList<AgentListConfig> configs = new ArrayList<>();
         configs.add(new LinkTypeAgentConfig());
         return configs;
